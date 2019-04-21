@@ -1,0 +1,15 @@
+.btn {
+  margin: 5px;
+}
+
+#add-animal {
+  margin-top: 10px;
+}
+
+.animal-pic-container {
+  width: 25%;
+}
+
+#animal-pic {
+  float: left;
+}
