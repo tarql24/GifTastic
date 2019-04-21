@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GifTastic</title>
+
+    <link rel="stylesheet" href="assets/giffy.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="card">
+            <h5 class="card-header">Get Giffy</h5>
+            <div class="card-body">
+              <div id="buttons-view"></div>
+              <div class="animal-pic-container">
+                <div id="animal-pic"></div>
+                <div class="pic-rating"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h5 class="card-header">Add More</h5>
+            <div class="card-body">
+              <form id="movie-form">
+                <!-- <label for="movie-input">Add a Movie, Yo!</label> -->
+                <input type="text" id="animal-input" /><br />
+
+                <!-- Button triggers new movie to be added -->
+                <input
+                  id="add-animal"
+                  type="submit"
+                  value="Click Here"
+                  class="btn btn-primary"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Code to the JavaScript File -->
+    <script src="assets/gif.js"></script>
+  </body>
+</html>
