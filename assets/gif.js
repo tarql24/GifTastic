@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 var topics = [
   "birds",
   "cat",
@@ -119,7 +118,6 @@ $(".animal").on("click", function() {
 });
 // renderButtons();
 function imageChangeState() {
-  // $(".gif").on("click", function() {
   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
   var state = $(this).attr("data-state");
   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
@@ -132,6 +130,5 @@ function imageChangeState() {
     $(this).attr("src", $(this).attr("data-still"));
     $(this).attr("data-state", "still");
   }
-  // });
 }
 $(document).on("click", ".gif", imageChangeState);
