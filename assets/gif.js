@@ -1,3 +1,4 @@
+// $(document).ready(function() {
 var topics = [
   "birds",
   "cat",
@@ -60,12 +61,6 @@ $("#add-animal").on("click", function(event) {
   renderButtons();
 });
 
-// Function for displaying the movie info
-// We're adding a click event listener to all elements with the class "movie"
-// We're adding the event listener to the document because it will work for dynamically generated elements
-// $(".movies").on("click") will only add listeners to elements that are on the page at that time
-// $(document).on("click", ".movie", alertMovieName);
-
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
 
@@ -105,11 +100,8 @@ $(".animal").on("click", function() {
         // Creating and storing an image tag
         var animalImage = $("<img>");
         // Setting the src attribute of the image to a property pulled off the result item
-        animalImage.attr("src", results[i].images.fixed_height.url);
-        animalImage.attr(
-          "data-still",
-          results[i].images.fixed_height_still.url
-        );
+        animalImage.attr("src", results[i].images.fixed_height_still.url);
+        animalImage.attr("data-still", results[i].images.fixed_height.url);
         animalImage.attr("data-animate", results[i].images.fixed_height.url);
         animalImage.attr("class", "gif");
         animalImage.attr("data-state", "still");
@@ -125,8 +117,9 @@ $(".animal").on("click", function() {
       //   $("#animal-pic").empty();
     });
 });
-
-$(".gif").on("click", function() {
+// renderButtons();
+function imageChangeState() {
+  // $(".gif").on("click", function() {
   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
   var state = $(this).attr("data-state");
   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
@@ -139,4 +132,6 @@ $(".gif").on("click", function() {
     $(this).attr("src", $(this).attr("data-still"));
     $(this).attr("data-state", "still");
   }
-});
+  // });
+}
+$(document).on("click", ".gif", imageChangeState);
