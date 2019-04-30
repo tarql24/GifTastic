@@ -64,7 +64,7 @@ $('#add-animal').on('click', function(event) {
 renderButtons();
 
 // Adding click event listen listener to all buttons
-$('#buttons-view').on('click', '.animal' function() {
+$('#buttons-view').on('click', '.animal', function() {
   $('#animal-pic').empty();
   // Grabbing and storing the data-animal property value from the button
   var animal = $(this).attr('data-name');
@@ -125,6 +125,4 @@ function imageChangeState() {
     $(this).attr('data-state', 'still');
   }
 }
-
 $(document).on('click', '.gif', imageChangeState);
-$(document).on('click', '.animal', ready);
